@@ -24,8 +24,16 @@ print(df_faminc_15)
 # VARIABLES TO ANALYZE
 # "state", "age", "ind_2d", "paidhre", "ownchild", "female", "wbhaom", "marstat", "citizen", "prcitshp", "cow1", "cow2", "multjobn", "educ92" , "docc03", "uhourse", "reltoref"
 
+# DEBUG
+print(generate_vector_combinations)
+print(multivariable_bmw_analysis)
+
+
 multivariable_vector <- c("state", "age", "ind_2d", "paidhre", "ownchild", "female", "wbhaom", "marstat", "citizen", "prcitshp", "cow1", "cow2", "multjobn", "educ92" , "docc03", "uhourse", "reltoref")
 multivariable_vector_combinations <- generate_vector_combinations(multivariable_vector)
+
+
+print(multivariable_vector_combinations)
 
 # COMBINATIONS OF VARIABLES WHICH HAVE THE HIGHEST COUNT
 highest_counts_df <- matrix(ncol=2,nrow=length(multivariable_vector_combinations))
@@ -36,12 +44,13 @@ for (index in seq_along(multivariable_vector_combinations)) {
   temp_multidimensional_table <- multivariable_bmw_analysis(df_faminc_15, multivariable_vector_combinations[[index]])
   table_file_name <- paste(multivariable_vector_combinations[[index]], collapse = "")
   
-  highest_counts_df[index,1] <- table_file_name
+  highest_counts_df[index,1] <- paste(multivariable_vector_combinations[[index]], collapse = " ")
   highest_counts_df[index,2] <- temp_multidimensional_table$Count[1]
 }
 
 sorted_variable_comb <- data.frame(highest_counts_df) %>% mutate(X2 = as.numeric(X2))%>% group_by(X2) %>% arrange(desc(X2))
 print(sorted_variable_comb)
+
 save(sorted_variable_comb, file = "sorted_variable_comb.RData")
 
 # BELOW IS CODE FOR SAVING THE TABLES
