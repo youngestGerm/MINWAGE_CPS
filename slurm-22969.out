@@ -1,0 +1,70 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──
+✔ tibble  2.1.3     ✔ purrr   0.3.3
+✔ tidyr   1.0.0     ✔ stringr 1.4.0
+✔ readr   1.3.1     ✔ forcats 0.4.0
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+# A tibble: 402 x 163
+    year month minsamp hhid  hhid2 hrsample hrsersuf hhnum hrlonglk lineno
+   <dbl> <dbl>   <dbl> <chr> <chr> <chr>    <chr>    <chr> <dbl+lb>  <dbl>
+ 1  2019     1       4 6101… 09111 09       11       1     2 [Cont…      3
+ 2  2019     1       4 2909… 09011 09       01       1     2 [Cont…      3
+ 3  2019     1       4 4906… 09011 09       01       1     2 [Cont…      1
+ 4  2019     1       8 9291… 07011 07       01       1     2 [Cont…      1
+ 5  2019     1       8 6104… 07011 07       01       1     2 [Cont…      4
+ 6  2019     1       8 4026… 07011 07       01       1     2 [Cont…      2
+ 7  2019     1       4 1021… 09011 09       01       1     2 [Cont…      3
+ 8  2019     1       8 0206… 07012 07       01       2     2 [Cont…      1
+ 9  2019     1       4 1528… 09011 09       01       1     2 [Cont…      3
+10  2019     1       8 2007… 07011 07       01       1     2 [Cont…      1
+# … with 392 more rows, and 153 more variables: fnlwgt <dbl>, orgwgt <dbl>,
+#   lonwgt <dbl>, famwgt <dbl>, age <dbl>, female <dbl>, wbho <dbl+lbl>,
+#   wbhao <dbl+lbl>, wbhom <dbl+lbl>, wbhaom <dbl+lbl>, racehpia <dbl>,
+#   racehpi <dbl>, racea <dbl+lbl>, forborn <dbl>, citizen <dbl>,
+#   prcitshp <dbl+lbl>, arrived <dbl+lbl>, prinusyr <dbl+lbl>,
+#   penatvty <dbl+lbl>, pemntvty <dbl+lbl>, pefntvty <dbl+lbl>, vet <dbl>,
+#   married <dbl>, marstat <dbl+lbl>, ownchild <dbl>, ch02 <dbl>, ch05 <dbl>,
+#   ch35 <dbl>, ch613 <dbl>, ch1417 <dbl>, famrel84 <dbl+lbl>,
+#   famrel94 <dbl+lbl>, famrel <dbl+lbl>, relahh <dbl>, hoh79 <dbl>,
+#   refper <dbl>, faminc <dbl+lbl>, lfstat <dbl+lbl>, empl <dbl>, unem <dbl>,
+#   nilf <dbl>, selfemp <dbl>, selfinc <dbl>, pubsect <dbl>, pubfed <dbl>,
+#   pubst <dbl>, publoc <dbl>, cow1 <dbl+lbl>, cow2 <dbl+lbl>, unemdur <dbl>,
+#   jobloser <dbl>, jobleaver <dbl>, entrant <dbl>, unmem <dbl>, uncov <dbl>,
+#   union <dbl>, cert <dbl>, certgov <dbl>, schenrl <dbl>, schhs <dbl>,
+#   schcol <dbl>, schft <dbl>, schpt <dbl>, multjob <dbl>, multjobn <dbl>,
+#   pdemp1 <dbl>, pdemp2 <dbl>, nmemp1 <dbl>, nmemp2 <dbl>, state <dbl+lbl>,
+#   metro <dbl>, centcity <dbl>, suburb <dbl>, rural <dbl>,
+#   cmsacode05 <dbl+lbl>, cmsacode14 <dbl+lbl>, fipscounty <dbl>,
+#   principalcty <dbl>, smsastat05 <dbl+lbl>, smsastat14 <dbl+lbl>,
+#   cbsasz <dbl+lbl>, nyc <dbl>, la <dbl>, educ <dbl+lbl>, educ92 <dbl+lbl>,
+#   ind_nber <dbl+lbl>, ind_2d <dbl+lbl>, ind70 <dbl+lbl>, ind80 <dbl>,
+#   ind03 <dbl+lbl>, ind09 <dbl+lbl>, ind12 <dbl+lbl>, ind14 <dbl+lbl>,
+#   ind_m03 <dbl+lbl>, agric <dbl>, manuf <dbl>, servs <dbl>, docc70 <dbl>,
+#   docc80 <dbl+lbl>, docc03 <dbl+lbl>, …
+# A tibble: 131,071 x 2
+# Groups:   X2 [196]
+   X1                                    X2
+   <fct>                              <dbl>
+ 1 ind_2dcitizenmultjobn                196
+ 2 ind_2dprcitshpdocc03                 196
+ 3 cow1multjobndocc03                   196
+ 4 ind_2dcitizenprcitshpdocc03          196
+ 5 ind_2dcitizencow1multjobn            196
+ 6 ind_2dprcitshpcow1docc03             196
+ 7 paidhrecitizencow1docc03             196
+ 8 ind_2dcitizenprcitshpcow1docc03      196
+ 9 paidhrecitizencow1multjobnreltoref   196
+10 ind_2dpaidhredocc03                  195
+# … with 131,061 more rows
